@@ -26,5 +26,5 @@ node.js blue dark
 - [x] Finding a library that can be used to print colors based on hex codes
 - [x] Finding out how to generate a random color
 - [X] Finding out how to get and process user input
-- [ ] Finding out how to apply changes in hue and luminosity
+- [X] Finding out how to apply changes in hue and luminosity
 ```

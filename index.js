@@ -3,25 +3,41 @@ import chalk from 'chalk';
 import randomcolor from 'randomcolor';
 
 if (argv.length < 3) {
-  // Create the colored hash block if no user input
-  const hashBlock = chalk.hex(randomcolor())('#'.repeat(31)); // Assign a random color to the hash block
+  const colorHex = randomcolor(); //create a random hex code
+  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); //Create a hashblock with random color
 
   for (let i = 0; i < 9; i++) {
-    console.log(hashBlock); // Log and loop the pre-colored hash line
+    if (i < 3 || i > 5) {
+      console.log(hashBlock);
+    } // full lines of hashes
+    else if (i === 4) {
+      console.log(chalk.hex(colorHex)(`#####       ${colorHex}       #####`));
+    } //middle row with hex code
+    else {
+      console.log(chalk.hex(colorHex)('#####                     #####'));
+    }
   }
 } else {
   //Fetching User Input for Hue and Luminosity
-  const luminosity = argv[3];
-  const hue = argv[2];
+
+  const luminosity = argv[2];
+  const hue = argv[3];
   // Create the colored hash block with user input
-  const hashBlock = chalk.hex(
-    randomcolor({
-      luminosity: luminosity,
-      hue: hue,
-    }),
-  )('#'.repeat(31)); // Assign a random color to the hash block
+  const colorHex = randomcolor({
+    luminosity: luminosity,
+    hue: hue,
+  });
+  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); // Assign a random color to the hash block
 
   for (let i = 0; i < 9; i++) {
-    console.log(hashBlock); // Log and loop the pre-colored hash line
+    if (i < 3 || i > 5) {
+      console.log(hashBlock);
+    } // full lines of hashes
+    else if (i === 4) {
+      console.log(chalk.hex(colorHex)(`#####       ${colorHex}       #####`));
+    } //middle row with hex code
+    else {
+      console.log(chalk.hex(colorHex)('#####                     #####'));
+    }
   }
 }
