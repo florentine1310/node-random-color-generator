@@ -20,8 +20,8 @@ if (argv.length < 3) {
 } else {
   // Fetching User Input for Hue and Luminosity
 
-  const luminosity = argv[2];
-  const hue = argv[3];
+  const luminosity = argv[3];
+  const hue = argv[2];
   // Create the colored hash block with user input
   const colorHex = randomcolor({
     luminosity: luminosity,
