@@ -3,22 +3,22 @@ import chalk from 'chalk';
 import randomcolor from 'randomcolor';
 
 if (argv.length < 3) {
-  const colorHex = randomcolor(); //create a random hex code
-  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); //create colored hashblock
+  const colorHex = randomcolor(); // Create a random hex code
+  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); // Create colored hash block
 
   for (let i = 0; i < 9; i++) {
     if (i < 3 || i > 5) {
       console.log(hashBlock);
-    } // full lines of hashes
+    } // Full lines of hashes
     else if (i === 4) {
       console.log(chalk.hex(colorHex)(`#####       ${colorHex}       #####`));
-    } //middle row with hex code
+    } // Middle row with hex code
     else {
       console.log(chalk.hex(colorHex)('#####                     #####'));
     }
   }
 } else {
-  //Fetching User Input for Hue and Luminosity
+  // Fetching User Input for Hue and Luminosity
 
   const luminosity = argv[2];
   const hue = argv[3];
@@ -32,10 +32,10 @@ if (argv.length < 3) {
   for (let i = 0; i < 9; i++) {
     if (i < 3 || i > 5) {
       console.log(hashBlock);
-    } // full lines of hashes
+    } // Full lines of hashes
     else if (i === 4) {
       console.log(chalk.hex(colorHex)(`#####       ${colorHex}       #####`));
-    } //middle row with hex code
+    } // Middle row with hex code
     else {
       console.log(chalk.hex(colorHex)('#####                     #####'));
     }
