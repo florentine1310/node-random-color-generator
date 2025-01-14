@@ -4,7 +4,7 @@ import randomcolor from 'randomcolor';
 
 if (argv.length < 3) {
   const colorHex = randomcolor(); //create a random hex code
-  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); //Create a hashblock with random color
+  const hashBlock = chalk.hex(colorHex)('#'.repeat(31)); //create colored hashblock
 
   for (let i = 0; i < 9; i++) {
     if (i < 3 || i > 5) {
